@@ -2,25 +2,32 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using HCWebApp.Models;
+using HCWebApp.Repository;
 using Microsoft.AspNetCore.Mvc;
 
 namespace HCWebApp.Controllers
 {
     public class ProductController : Controller
     {
-        public string GetAllProducts()
+        private readonly ProductRepository _productRepository = null;
+        public ProductController()
         {
-            return "All Products";
+            _productRepository = new ProductRepository();
+        }
+        public List<ProductModel> GetAllProducts()
+        {
+            return _productRepository.GetAllProducts();
         }
 
-        public string GetProduct(int id)
+        public ProductModel GetProduct(int id)
         {
-            return $"Product with id = {id}";
+            return _productRepository.GetProductById(id);
         }
 
-        public string SearchProducts(string prodName, string prodType)
+        public List<ProductModel> SearchProducts(string prodName, string prodType)
         {
-            return $"Product with Name = {prodName} & Type = {prodType}";
+            return _productRepository.SearchProduct(prodName,prodType);
         }
     }
 }

@@ -25,7 +25,7 @@ namespace HCWebApp
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
-            } 
+            }
             //else if (env.IsProduction())
             //{
 
@@ -39,6 +39,7 @@ namespace HCWebApp
 
             //}
 
+            app.UseStaticFiles();
 
             app.UseRouting();
 
