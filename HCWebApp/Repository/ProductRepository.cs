@@ -27,11 +27,11 @@ namespace HCWebApp.Repository
         {
             return new List<ProductModel>()
             {
-                new ProductModel(){Id= 1, Name="Crunch", Type="Ontbijt Shake"},
-                new ProductModel(){Id= 2, Name="Vanille", Type="Ontbijt Shake"},
-                new ProductModel(){Id= 3, Name="Appel", Type="Ontbijt Shake"},
-                new ProductModel(){Id= 4, Name="Aardbei", Type="Ontbijt Shake"},
-                new ProductModel(){Id= 5, Name="Chocolade", Type="Ontbijt Shake"},
+                new ProductModel(){Id= 1, Name="Crunch", Type="Ontbijt Shake", Description="This is the description for product Crunch"},
+                new ProductModel(){Id= 2, Name="Vanille", Type="Ontbijt Shake", Description="This is the description for product Vanille"},
+                new ProductModel(){Id= 3, Name="Appel", Type="Ontbijt Shake", Description="This is the description for product Appel"},
+                new ProductModel(){Id= 4, Name="Aardbei", Type="Ontbijt Shake", Description="This is the description for product Aardbei"},
+                new ProductModel(){Id= 5, Name="Chocolade", Type="Ontbijt Shake", Description="This is the description for product Chocolade"},
             };
         }
     }

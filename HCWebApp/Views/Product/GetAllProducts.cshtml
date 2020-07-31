@@ -1,17 +1,33 @@
-﻿
+﻿@using HCWebApp.Models
+@model IEnumerable<ProductModel>
 @{
-    Layout = null;
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<!DOCTYPE html>
+   
+    <div class="container">
+        <h3>All Products</h3>
+        <div class="row">
 
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>GetAllProducts</title>
-</head>
-<body>
-    <h1>All Product List</h1>
-    <button>Click Me</button>
-</body>
-</html>
+            @foreach (var product in Model)
+            {
+                <div class="card mb-4 shadow-sm">
+                    <img src="~/images/logo.png" class="card-img-top" width="200" height="200" alt="...">
+                    <div class="card-body">
+                        <h3>@product.Name</h3>
+                        <p class="card-text">@product.Description</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                                <a href="#" class="btn btn-sm btn-outline-secondary">@product.Type</a>
+                            </div>
+                            <small class="text-muted">@product.Id</small>
+                        </div>
+                    </div>
+                </div>
+
+            }
+
+
+        </div>
+
+    </div>

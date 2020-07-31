@@ -15,9 +15,10 @@ namespace HCWebApp.Controllers
         {
             _productRepository = new ProductRepository();
         }
-        public List<ProductModel> GetAllProducts()
+        public ViewResult GetAllProducts()
         {
-            return _productRepository.GetAllProducts();
+            var data = _productRepository.GetAllProducts();
+            return View(data);
         }
 
         public ProductModel GetProduct(int id)
